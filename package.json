@@ -1,0 +1,22 @@
+{
+  "name": "312-demo",
+  "version": "1.0.0",
+  "description": "express demo!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrbaldwin/312-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hrbaldwin/312-demo/issues"
+  },
+  "homepage": "https://github.com/hrbaldwin/312-demo#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
