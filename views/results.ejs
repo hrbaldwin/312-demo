@@ -14,10 +14,14 @@
   </head>
   <body>
     <h1>Potential Play Dates:</h1>
-    <a href="/likes">View Your Matches</a>
+    <a href="/likes" class="navButton">View Your Matches</a>
     <div class="dogCards">
       <% if (dogs.length === 0) {%>
-      <p>no pups near you... 🥺 ... try searching another area</p>
+      <div class="emptyResultsCard">
+        <p class="emptyResults">
+          no pups near you... 🥺 ... try searching another area
+        </p>
+      </div>
       <% } %> <% dogs.forEach(dog => { %>
       <div class="dogCard">
         <div class="nameAndBreed">

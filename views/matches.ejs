@@ -14,5 +14,49 @@
   </head>
   <body>
     <h1>Your Likes</h1>
+    <a href="/search" class="navButton">Search Again</a>
+    <div class="dogCards">
+      <% if (dogs.length === 0) {%>
+      <div class="emptyResultsCard">
+        <p class="emptyResults">no likes yet ... 🥺 ... show some love</p>
+      </div>
+      <% } %> <% dogs.forEach(dog => { %>
+      <div class="dogCard">
+        <div class="nameAndBreed">
+          <h3 class="dogName"><%= dog.name %></h3>
+        </div>
+        <% if (dog.photos.length > 0) { %>
+        <img
+          src="<%= dog.photos[0].medium %>"
+          alt="<%= dog.name %>"
+          class="dogImage"
+        />
+        <% } else { %>
+        <img
+          src="/No-Image-Placeholder.svg"
+          alt="No image of <%= dog.name %> available"
+          class="dogImage"
+        />
+        <% } %>
+
+        <div class="dogCardBottom">
+          <div class="dogStats">
+            <p><b>Age:</b> <%= dog.age %></p>
+            <p><b>Size:</b> <%= dog.size %></p>
+            <!-- <p><b>ID:</b> <%= dog.id %></p> -->
+            <p>
+              <b>Location: </b> <%= dog.contact.address.city %>, <%=
+              dog.contact.address.state %>
+            </p>
+          </div>
+
+          <form method="POST" action="/unlikes/<%= dog.id %>">
+            <button type="submit" class="likeButton">💔</button>
+          </form>
+        </div>
+      </div>
+
+      <% }); %>
+    </div>
   </body>
 </html>

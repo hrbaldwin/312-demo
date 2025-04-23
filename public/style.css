@@ -10,8 +10,6 @@ body {
 }
 
 .dogCard {
-    /* background-color: white;
-    width: 80%; */
     display: inline-block;
     flex-grow: 1;
     margin: 5px 20px;
@@ -111,4 +109,38 @@ input {
     flex-direction: row;
     justify-content: space-evenly;
     margin-bottom: 30px;
+}
+
+.navButton {
+    display: flex;
+    margin: -20px 20px 20px 20px;
+    padding: 15px;
+    background-color: #f8b8d0;
+    text-decoration: none;
+    color: black;
+    max-width: 15%;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.navButton:hover {
+    background-color: white;
+    color: #054fb9;
+    border:  2px solid #054fb9;
+}
+
+.emptyResults {
+    justify-content: center;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.emptyResultsCard{
+    background-color: white;
+    padding: 80px;
+    border-radius: 30%;
+    justify-content: center;
+    margin-left: 55%;
+    width: 300px;
 }
