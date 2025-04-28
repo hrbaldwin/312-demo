@@ -19,7 +19,7 @@
       <% if (dogs.length === 0) {%>
       <div class="emptyResultsCard">
         <p class="emptyResults">
-          no pups near you... 🥺 ... try searching another area
+          no pups near you... try searching another area
         </p>
       </div>
       <% } %> <% dogs.forEach(dog => { %>
@@ -46,7 +46,6 @@
           <div class="dogStats">
             <p><b>Age:</b> <%= dog.age %></p>
             <p><b>Size:</b> <%= dog.size %></p>
-            <!-- <p><b>ID:</b> <%= dog.id %></p> -->
             <p>
               <b>Location: </b> <%= dog.contact.address.city %>, <%=
               dog.contact.address.state %>
